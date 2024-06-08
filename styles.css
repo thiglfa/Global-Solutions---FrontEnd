@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #1E90FF; /* Azul vibrante */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -42,29 +42,36 @@ section {
     margin-bottom: 2rem;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
-th, td {
+.team-member {
+    background-color: white;
     border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 1rem;
-    text-align: left;
+    width: calc(25% - 2rem); /* Adjust based on the gap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-th {
-    background-color: #4CAF50;
-    color: white;
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.team-member h2 {
+    color: #1E90FF; /* Azul vibrante */
+    margin-bottom: 0.5rem;
 }
 
-tr:hover {
-    background-color: #ddd;
+.team-member p {
+    margin-bottom: 0.5rem;
 }
 
 #contactForm {
@@ -86,7 +93,7 @@ tr:hover {
 #contactForm button {
     margin-top: 1rem;
     padding: 0.75rem;
-    background-color: #4CAF50;
+    background-color: #1E90FF; /* Azul vibrante */
     color: white;
     border: none;
     border-radius: 4px;
@@ -94,7 +101,7 @@ tr:hover {
 }
 
 #contactForm button:hover {
-    background-color: #45a049;
+    background-color: #1C86EE;
 }
 
 footer {
@@ -107,24 +114,32 @@ footer {
     bottom: 0;
 }
 
-.member {
-    background-color: white;
+/* Estilos específicos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    text-align: left;
 }
 
-.member img {
-    max-width: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+th {
+    background-color: #1E90FF; /* Azul vibrante */
+    color: white;
 }
 
-.member h2 {
-    margin-bottom: 0.5rem;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.member p {
-    margin-bottom: 0.5rem;
+tr:hover {
+    background-color: #ddd;
 }
+
