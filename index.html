@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Níveis de Poluição da Água</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Níveis de Poluição da Água</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <p>Esta tabela descreve os diferentes níveis de poluição da água, suas implicações e sugestões para mitigação. Utilize os filtros abaixo para visualizar as informações relevantes.</p>
+        </section>
+        <section id="filters">
+            <label for="pollution-level">Filtrar por nível de poluição:</label>
+            <select id="pollution-level" onchange="filterTable()">
+                <option value="all">Todos</option>
+                <option value="low">Baixo (0-50)</option>
+                <option value="moderate">Moderado (51-100)</option>
+                <option value="high">Alto (101-150)</option>
+                <option value="very-high">Muito Alto (151-200)</option>
+                <option value="critical">Crítico (&gt;200)</option>
+            </select>
+        </section>
+        <section>
+            <table id="pollutionTable">
+                <thead>
+                    <tr>
+                        <th>Nível de Poluição</th>
+                        <th>Descrição</th>
+                        <th>Implicações</th>
+                        <th>Sugestões</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-level="low">
+                        <td>Baixo (0-50)</td>
+                        <td>A água está levemente poluída e é segura para a maioria dos usos.</td>
+                        <td>A qualidade da água é aceitável para consumo e atividades recreativas.</td>
+                        <td>Mantenha práticas de conservação e evite despejar produtos químicos.</td>
+                    </tr>
+                    <tr data-level="moderate">
+                        <td>Moderado (51-100)</td>
+                        <td>A água apresenta alguma poluição e pode não ser segura para beber sem tratamento.</td>
+                        <td>A água pode ser usada para irrigação e atividades industriais, mas não é recomendada para consumo humano sem tratamento adequado.</td>
+                        <td>Reduza o uso de fertilizantes e pesticidas. Melhore o tratamento de esgoto.</td>
+                    </tr>
+                    <tr data-level="high">
+                        <td>Alto (101-150)</td>
+                        <td>A água está poluída e pode ser prejudicial à saúde.</td>
+                        <td>A água não é segura para consumo humano e pode causar problemas de saúde se usada para banho ou recreação.</td>
+                        <td>Limite a poluição industrial e agrícola. Incentive o tratamento de água.</td>
+                    </tr>
+                    <tr data-level="very-high">
+                        <td>Muito Alto (151-200)</td>
+                        <td>A água está altamente poluída e é perigosa para consumo.</td>
+                        <td>A água pode causar sérios problemas de saúde e ambientais.</td>
+                        <td>Implemente regulamentos rigorosos de controle de poluição. Realize campanhas de conscientização.</td>
+                    </tr>
+                    <tr data-level="critical">
+                        <td>Crítico (&gt;200)</td>
+                        <td>A água está extremamente poluída e representa um grave risco à saúde.</td>
+                        <td>A água é tóxica e perigosa para todas as formas de vida.</td>
+                        <td>Tome medidas imediatas para reduzir a poluição. Forneça fontes alternativas de água potável.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Projeto de Poluição da Água. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
